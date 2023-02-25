@@ -41,12 +41,14 @@ class _AddUpdateTaskState extends State<AddUpdateTask> {
   Widget build(BuildContext context) {
     final titleController = TextEditingController(text: widget.todoTitle);
     final descController = TextEditingController(text: widget.todoDesc);
+
     String appTitle;
     if (widget.update == true) {
-      appTitle = "update Task";
+      appTitle = "subir tarea";
     } else {
-      appTitle = "add Task";
+      appTitle = "Añadir tareas";
     }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -75,11 +77,11 @@ class _AddUpdateTaskState extends State<AddUpdateTask> {
                       controller: titleController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: "Note Title",
+                        hintText: "ingrese el titlulo",
                       ),
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return "enter some text";
+                          return "escriba algo";
                         }
                         return null;
                       },
@@ -95,11 +97,11 @@ class _AddUpdateTaskState extends State<AddUpdateTask> {
                       controller: descController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        hintText: "write notes here",
+                        hintText: "ingrese descripsion",
                       ),
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return "enter some text";
+                          return "escriba algo";
                         }
                         return null;
                       },
@@ -171,7 +173,7 @@ class _AddUpdateTaskState extends State<AddUpdateTask> {
                               //],
                               ),
                           child: Text(
-                            "submit",
+                            "publicar",
                             style: TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.w500,
@@ -208,7 +210,7 @@ class _AddUpdateTaskState extends State<AddUpdateTask> {
                               //],
                               ),
                           child: Text(
-                            "clear",
+                            "limpiar",
                             style: TextStyle(
                               fontSize: 22,
                               fontWeight: FontWeight.w500,

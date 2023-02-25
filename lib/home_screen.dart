@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: Drawer(),
       appBar: AppBar(
         title: Text(
-          "DP-TODO",
+          "Tareas pendientes",
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.w600,
@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
               } else if (snapshot.data!.length == 0) {
                 return Center(
                   child: Text(
-                    "no task found",
+                    "ninguna tarea encontrada",
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,

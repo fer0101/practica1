@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _loginBtn() {
     return ElevatedButton(
       onPressed: () {
-        debugPrint("Username: " + usernameController.text);
+        debugPrint("Nombre: " + usernameController.text);
         debugPrint("password: " + passwordController.text);
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => HomeScreen()));
@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
       child: const SizedBox(
           width: double.infinity,
           child: Text(
-            "Sing in ",
+            "Entrar ",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 20),
           )),
