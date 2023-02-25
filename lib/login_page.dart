@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica1/home_screen.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -85,6 +86,8 @@ class _LoginPageState extends State<LoginPage> {
       onPressed: () {
         debugPrint("Username: " + usernameController.text);
         debugPrint("password: " + passwordController.text);
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
       },
       child: const SizedBox(
           width: double.infinity,

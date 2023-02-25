@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:prac1/login_page.dart';
+import 'package:practica1/login_page.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(MyApp());
 
-class MainApp extends StatelessWidget {
-  const MainApp({Key? key}) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: "todo app",
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          appBarTheme: AppBarTheme(
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black,
+      )),
       home: LoginPage(),
     );
   }
